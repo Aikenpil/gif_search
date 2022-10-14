@@ -8,8 +8,14 @@ import 'dart:async';
 const request = "api.giphy.com/v1/gifs/search";
 
 void main() async {
-  print(await getData());
-  runApp(MaterialApp(home: HomePage(),));
+  //print(await getData());
+  runApp(
+      MaterialApp(
+        home: HomePage(),
+        theme: ThemeData(hintColor: Colors.white),
+        debugShowCheckedModeBanner: false,
+      )
+  );
 }
 
 Future<Map> getData() async {
